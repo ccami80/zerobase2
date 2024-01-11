@@ -1,0 +1,165 @@
+.menu-detail-area{
+  background:#fff;
+  .menu-bg{
+    position:Relative;
+    height:300px;
+    background-color:#f8f8f8;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:cover;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.03);
+    &::before{
+      position:absolute;
+      content:'';
+      top:0;
+      left:0;
+      width:100%;
+      height:130px;
+      background:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0));
+      z-index:1
+    }
+    &::After{
+      content:'';
+      position:absolute;
+      bottom:0;
+      left:0;
+      width:100%;
+      height:65px;
+      background:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0));
+      z-index:1;
+    }
+   
+  }
+  //메뉴정보영역
+  .menu-info-area{
+    padding:0 $m-padding 20px;
+    
+    .common-inner{
+      position:relative;
+      margin-top:-20px;
+      z-index:1;
+      background:#fff;
+      padding:18px;
+      border-radius:5px;
+      box-shadow:0 0 4px 3px rgba(0,0,0,.04)
+    }
+    .menu-info-group{
+      margin-top:5px;
+      .menu-price{
+        line-heighT:24px;
+        font-size:18px;
+        font-weight:500;
+        color:$point-color;
+      }
+      .menu-grade:before,
+      .menu-number-of-order:before{
+        content:'';
+        display:inline-block;
+        width:1px;
+        margin:0 8px;
+        height:12px;
+        // background:red;
+        transform:translateY(1px);
+        background:$booking-color-bg168;
+      }
+      .menu-grade,
+      .menu-number-of-order{
+        line-height:24px;
+      }
+    }
+    .menu-desc{
+      margin-top:12px;
+      font-size:14px;
+      line-height:22px;
+      color:$booking-color-text6
+    }
+  }
+
+
+  //메뉴주문영역
+  .order-type-area{
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid $booking-color-border160;
+
+    .type-select,
+    .type-amount{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+    }
+    .type-select{
+      .title{
+        display:flex;
+        align-items:center;
+        font-weight:500;
+        font-size:15px;
+        letter-spacing:-.3px;
+        color:$booking-color-text6;
+      }
+      .ico-n-logo{
+        margin-right:4px;
+        width:20px;
+      }
+      .tab-switch-box{
+        margin-top:0;
+        // width:160px;
+        border-radius:3px;
+        overflow:hidden;
+      }
+      .tab-switch{
+        line-height:37px;
+        font-size:13px;
+        // flex:1;
+        width:80px;
+        &.is-active{
+          flex:1;
+          border-radius:3px;
+          &:after{
+            display:none
+          }
+        }
+        &+.tab-switch{
+          position:Relative;
+          &:before{
+            content:'';
+            display:block;
+            position:Absolute;
+            top:10px;
+            left:0;
+            width:1px;
+            height:17px;
+            background:#e7e7e7;
+          }
+        }
+      }
+    }
+
+    .type-amount{
+      margin-top:20px;
+      .title{
+        font-size:14px;
+        font-weight:500;
+        letter-spacing:-.3px;
+        color:$booking-color-text6;
+      }
+    }
+    .btn-order{
+      display:block;
+      margin-top:20px;
+      width:100%;
+      line-height:46px;
+      font-weight:500;
+      background:$green;
+      color:#fff;
+      @include ellipsis;
+      padding:0 16px;
+
+      &:disabled{
+        background:#c9c9c9;
+        color:$booking-color-text131;
+      }
+    }
+  }
+}

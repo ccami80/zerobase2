@@ -1,0 +1,31 @@
+@import './scss/abstracts/variables_color';
+@import './scss/abstracts/variables';
+@import './scss/abstracts/mixin_common';
+
+@import './scss/base/reset';
+@import './scss/base/preset';
+@import './scss/base/webfont';
+
+@import './scss/components/menu/menu_category_area';
+@import './scss/components/menu/menu_list_area';
+@import "./scss/components/menu/order_box_area";
+@import './scss/components/menu/order_info_area';
+@import './scss/components/menu/order_type';
+@import './scss/components/menu/recent_order_area';
+
+@import './scss/components/detail/menu_detail_area';
+@import './scss/components/detail/menu_review_area';
+@import './scss/components/detail/option_popup_area';
+
+@import './scss/components/order/order_content';
+@import './scss/components/order/order_content_extra';
+@import './scss/components/order/order_form_area';
+
+@import './scss/components/amount_select';
+@import './scss/components/header_area';
+@import './scss/components/menu_item';
+@import './scss/components/go_to_top';
+@import "./scss/components/modal";
+
+@import './scss/pages/common';
+ 

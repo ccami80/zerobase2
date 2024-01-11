@@ -1,0 +1,180 @@
+.order-content{
+  margin:-40px 10px 0;
+  .common-inner{
+    position:relative;
+    background:#fff;
+    // height:800px;
+    &:before,
+    &:After{
+      position:absolute;
+      display:block;
+      content:'';
+      left:0;
+      width:100%;
+      height:5px;
+      background:url('../images/bg-pattern.png') repeat-x;
+      background-size:auto 5px;
+      
+    }
+    &:before{
+      top:-5px
+    }
+    &:after{
+      bottom:-5px;
+      transform:rotate(180deg)
+    }
+  }
+  .order-content-top{
+    position:relative;
+    padding:26px $m-padding 24px;
+    &:after{
+      position:absolute;
+      content:'';
+      top:26px;
+      right:$m-padding;
+      width:83px;
+      height:83px;
+      border-radius:50%;
+      // background:url('https://via.placeholder.com/83') no-repeat;
+      background:#eee url('../images/강아지와주임/jd2.png') no-repeat center top 10px/cover;
+      
+    }
+
+    .title{
+      line-height:1.2;
+      font-weight:500;
+      font-size:20px;
+      color:$green;
+    }
+    .desc{
+      margin-top:8px;
+      line-height:1.2;
+      font-size:14px;
+      font-weight:500;
+      color:$booking-color-text6;
+    }
+    .count{
+      margin-top:8px;
+      line-height:20px;
+      font-size:14px;
+      color:$booking-color-text4;
+      letter-spacing:-.4px;
+    }
+    
+  }
+  .order-content-body{
+    border-top:1px dashed $booking-color-border147;
+
+    .no-order{
+      padding:70px 0;
+      text-align:center;
+      .txt{
+        margin-top:6px;
+        font-size:14px;
+        color:#8f8f8f
+      }
+    }
+
+    .menu-list{
+      padding:0 $m-padding
+    }
+    .menu-item{
+      position:relative;
+
+      align-items:flex-start;
+      padding:22px $m-padding;
+      .menu-name-group{
+        padding-righT:40px;
+      }
+      .menu-name{
+        line-height:23px;
+        font-size:18px;
+      }
+      .menu-desc{
+        margin-top:2px;
+      }
+      .btn-option{
+        display:inline-block;
+        margin-top:8px;
+        padding:0 6px;
+        line-height:20px;
+        border-radius:3px;
+        border:1px solid $booking-color-border109;
+        font-size:10px;
+        background:$booking-color-bg21;
+        color:$booking-color-text4;
+
+      }
+      .amount-and-price{
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        margin-top:18px;
+        .menu-price{
+          margin-top:0;
+          font-size:18px;
+          font-weight:500
+        }
+      }
+      .btn-delete{
+        position:absolute;
+        right:0;
+        top:0;
+        padding:22px 18px;
+        .ico-delete{
+          width:14px;
+          opacity:.3
+        }
+      }
+    }
+    .order-total{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      margin:0 $m-padding;
+      padding:24px 0;
+      border-top:2px solid $booking-color-border112;
+      font-size:20px;
+      font-weight:500;
+      .total-price{
+        font-size:19px;
+        color:$point-color;
+      }
+    }
+  }
+  .btn-menu-add{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin:22px auto 30px;
+    width:150px;
+    line-height:48px;
+    border-radius:24px;
+    border:1px solid $booking-color-border101;
+    background:#fff;
+    color:$booking-color-text2;
+    box-shadow:0 2px 3px 0 rgba(0,0,0,.05);
+    .ico-add{
+      position:relative;
+      display:flex;
+      justify-content: center;
+      align-items:center;
+      width:13px;
+      height:13px;
+      margin-right:6px;
+      &:before{
+        content:'';
+        position:absolute;
+        width:1px;
+        height:13px;
+        background:$green
+      }
+      &:after{
+        content:'';
+        width:13px;
+        height:1px;
+        background:$green
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.recent-order-area{
+
+  display:flex;
+  margin-top:16px;
+  padding:18px 0;
+  background:#fff;
+  .recent-title{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:Center;
+    padding:8px;
+    // border-right:1px solid red;
+    border-right:1px solid $booking-color-bg102;
+    line-heighT:1.42;
+    font-weight:500;
+    font-size:12px;
+    flex-shrink: 0;
+    .ico-clock{
+      margin-bottom:4px;
+      width:14px;
+      height:auto;
+    }
+  }
+  .recent-menu-list{
+    display:flex;
+  }
+  .recent-menu-item{
+    box-sizing:content-box;
+    position:relative;
+
+    padding-right:16px;
+    width:80px;
+    text-align:Center;
+    &.is-ordered{
+      padding-left:16px;
+      border-right:1px solid $booking-color-bg102;
+      &+.recent-menu-item{
+        padding-left:16px
+      }
+      // border-right:1px solid red;
+    }
+    &:last-child{
+      padding-right:$m-padding;
+    }
+  }
+  .menu-img-area{
+    position:Relative;
+    width:80px;
+    height:80px;
+    border:1px solid $booking-color-border149;
+    border-radius:50%;
+    background:rgba(0,0,0,.1);
+    // margin-bottom:10px
+}
+.badge-popular{
+  position:absolute;
+  top:0;
+  left:0;
+  padding:0 5px;
+  line-height:16px;
+  border-radius:10px;
+  background:#ff61a7;
+  color:#fff;
+  font-size:10px;
+  font-weight:500;
+
+}
+.menu-img{
+  width:100%;
+  height:100%;
+  border-radius:50%
+}
+.badge-cart{
+  position:absolute;
+  top:50px;
+  right:16px;
+  padding:6px;
+  border:1px solid $booking-color-border150;
+  border-radius:50%;
+  display:flex;
+  background:#fff;
+}
+.ico-cart{
+  width:16px;
+  height:16px;
+}
+.menu-name{
+  margin-top:8px;
+  font-weight:500;
+  font-size:14px;
+  @include ellipsis
+
+}
+.menu-price{
+  font-size:13px;
+  font-weight:500;
+  color:$point-color;
+  @include ellipsis
+}
+}
